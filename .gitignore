@@ -2,8 +2,13 @@
 .gradle
 
 # Ignore Gradle build output directory
-build/
-**/build/
+build
+
+# Ignore Gradle properties file
+gradle.properties
+
+# Ignore Git attributes file
+.gitattributes
 
 # IDE files
 .idea/
