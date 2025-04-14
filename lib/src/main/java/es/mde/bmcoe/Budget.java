@@ -1,70 +1,58 @@
 package es.mde.bmcoe;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.List;
 
 public class Budget {
-	private String name;
-    private Double amount;
-    private String fiscalYear;
-    private Collection<Row> rows = new ArrayList<>();
-    
-    // Constructores
-    public Budget() {}
-    
-    public Budget(String name, Double amount) {
-        this.name = name;
-        this.amount = amount;
-    }
-    
-    public Budget(String name, Double amount, String fiscalYear) {
-        this.name = name;
-        this.amount = amount;
-        this.fiscalYear = fiscalYear;
-    }
-    
-    // Getters y setters
-    public String getName() {
-        return name;
-    }
-    
-    public void setName(String name) {
-        this.name = name;
-    }
-    
-    public Double getAmount() {
-        return amount;
-    }
-    
-    public void setAmount(Double amount) {
-        this.amount = amount;
-    }
-    
-    public String getFiscalYear() {
-        return fiscalYear;
-    }
-    
-    public void setFiscalYear(String fiscalYear) {
-        this.fiscalYear = fiscalYear;
-    }
-    
-    public Collection<Row> getRows() {
-        return rows;
-    }
-    
-    public void setRows(Collection<Row> rows) {
-        this.rows = rows;
-    }
-    
-    public void addRow(Row row) {
-        this.rows.add(row);
-    }
-    
-    // Método para calcular el total del presupuesto
-    public double obtainTotal() {
-        return rows.stream()
-                .filter(row -> row != null)
-                .mapToDouble(Row::getAmount)
-                .sum();
-    }
+	private Float totalAmount;
+	private String fiscalYear;
+	private List<Row> rows = new ArrayList<>();
+
+	public Budget() {
+	}
+
+	public Budget(Float totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+
+	public Budget(Float totalAmount, String fiscalYear) {
+		this.totalAmount = totalAmount;
+		this.fiscalYear = fiscalYear;
+	}
+
+	public Float getTotalAmount() {
+		return totalAmount;
+	}
+
+	public void setTotalAmount(Float totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+
+	public String getFiscalYear() {
+		return fiscalYear;
+	}
+
+	public void setFiscalYear(String fiscalYear) {
+		this.fiscalYear = fiscalYear;
+	}
+
+	public List<Row> getRows() {
+		return rows;
+	}
+
+	public void setRows(List<Row> rows) {
+		this.rows = rows;
+	}
+
+	public void addRow(Row row) {
+		this.rows.add(row);
+		obtainTotal();
+	}
+
+	public Float obtainTotal() {
+		totalAmount = (float) rows.stream()
+								  .filter(row -> row != null && row.getAmount() != null)
+								  .mapToDouble(Row::getAmount).sum();
+		return totalAmount;
+	}
 }

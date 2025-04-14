@@ -1,32 +1,60 @@
 package es.mde.bmcoe;
 
-public class Row {
-	private String description;
-    private Double amount;
-    
-    // Constructores
-    public Row() {}
-    
-    public Row(String description, Double amount) {
-        this.description = description;
-        this.amount = amount;
-    }
-    
-    // Getters y setters
-    public String getDescription() {
-        return description;
-    }
-    
-    public void setDescription(String description) {
-        this.description = description;
-    }
-    
-    public Double getAmount() {
-        return amount;
-    }
-    
-    public void setAmount(Double amount) {
-        this.amount = amount;
-    }
+public abstract class Row {
+	private Float amount;
+	private String cisiAccount;
+	private Integer code;
+	private String remarks;
+	private String briefDescription;
 
+	public Row() {
+	}
+
+	public Row(Float amount) {
+		this.amount = amount;
+	}
+
+	public Float getAmount() {
+		return amount;
+	}
+
+	public void setAmount(Float amount) {
+		this.amount = amount;
+	}
+
+	public String getCisiAccount() {
+		return cisiAccount;
+	}
+
+	public void setCisiAccount(String cisiAccount) {
+		this.cisiAccount = cisiAccount;
+	}
+
+	public Integer getCode() {
+		return code;
+	}
+
+	public void setCode(Integer code) {
+		this.code = code;
+	}
+
+	public String getRemarks() {
+		return remarks;
+	}
+
+	public void setRemarks(String remarks) {
+		this.remarks = remarks;
+	}
+
+	public String getBriefDescription() {
+		return briefDescription;
+	}
+
+	public void setBriefDescription(String briefDescription) {
+		this.briefDescription = briefDescription;
+	}
+
+	public abstract Float calculateTotal();
+
+	public abstract void obtainDetails();
 }
