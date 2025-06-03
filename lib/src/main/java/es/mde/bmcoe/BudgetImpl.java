@@ -27,7 +27,7 @@ public class BudgetImpl implements Budget {
     }
     
     @Override
-    public List<Row> getRows() {
+    public List<? extends Row> getRows() {
         return new ArrayList<>(rows);
     }
     
