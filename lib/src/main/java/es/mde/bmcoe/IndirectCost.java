@@ -1,4 +1,4 @@
-package es.mde.externas;
+package es.mde.bmcoe;
 
 public interface IndirectCost {
     Float calculateTotal();

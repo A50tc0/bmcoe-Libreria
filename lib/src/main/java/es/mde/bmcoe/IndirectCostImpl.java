@@ -1,4 +1,4 @@
-package es.mde.externas;
+package es.mde.bmcoe;
 
 public class IndirectCostImpl extends RowImpl implements IndirectCost {
     

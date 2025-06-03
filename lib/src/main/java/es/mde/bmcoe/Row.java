@@ -1,4 +1,4 @@
-package es.mde.externas;
+package es.mde.bmcoe;
 
 public interface Row {
 	Float getAmount();
@@ -11,5 +11,11 @@ public interface Row {
 	void setRemarks(String remarks);
 	String getBriefDescription();
 	void setBriefDescription(String briefDescription);
-
+	String getBranch();
+	void setBranch(String branch);
+	String getObservation();
+	void setObservation(String observation);
+	
+	Float calculateTotal();
+	void obtainDetails();
 }
