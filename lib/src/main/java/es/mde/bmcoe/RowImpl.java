@@ -8,8 +8,15 @@ public abstract class RowImpl implements Row {
     private String briefDescription; 
     private String branch;
     private String observation;
-       
-    // Getters y setters originales
+    private Budget budget;
+    
+    public Budget getBudget() {
+        return budget;
+    }
+    
+    public void setBudget(Budget budget) {
+        this.budget = budget;
+    }
     
     @Override
     public Float getAmount() {
@@ -21,7 +28,6 @@ public abstract class RowImpl implements Row {
         this.amount = amount;
     }
     
-    // Nuevos getters y setters
     @Override
     public String getCisiAccount() {
         return cisiAccount;
