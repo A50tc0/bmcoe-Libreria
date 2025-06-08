@@ -1,5 +1,7 @@
 package es.mde.bmcoe;
 
+import es.mde.bmcoe.BudgetImpl;
+
 public abstract class RowImpl implements Row {
     private Float amount;
     private String cisiAccount;
@@ -8,13 +10,13 @@ public abstract class RowImpl implements Row {
     private String briefDescription; 
     private String branch;
     private String observation;
-    private Budget budget;
+    private BudgetImpl budget;
     
-    public Budget getBudget() {
+    public BudgetImpl getBudget() {
         return budget;
     }
     
-    public void setBudget(Budget budget) {
+    public void setBudget(BudgetImpl budget) {
         this.budget = budget;
     }
     
