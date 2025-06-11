@@ -15,7 +15,5 @@ public interface Budget {
 	void addRow(Row row);
 	
 	void removeRow(Row row);
-	
-	Float obtainTotal();
 
 }

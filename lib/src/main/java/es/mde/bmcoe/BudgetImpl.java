@@ -53,11 +53,4 @@ public class BudgetImpl implements Budget {
         }
     }
     
-    @Override
-    public Float obtainTotal() {
-        return (float)rows.stream()
-                .filter(row -> row != null && row.getAmount() != null)
-                .mapToDouble(Row::getAmount)
-                .sum();
-    }
 }
