@@ -10,15 +10,6 @@ public abstract class RowImpl implements Row {
     private String briefDescription; 
     private String branch;
     private String observation;
-    private BudgetImpl budget;
-    
-    public BudgetImpl getBudget() {
-        return budget;
-    }
-    
-    public void setBudget(BudgetImpl budget) {
-        this.budget = budget;
-    }
     
     @Override
     public Float getAmount() {
