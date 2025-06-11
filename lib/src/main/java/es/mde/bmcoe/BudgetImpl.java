@@ -7,15 +7,13 @@ public class BudgetImpl implements Budget {
 
     private String fiscalYear;
     private List<Row> rows = new ArrayList<>();
-    
-    // Constructores
+
     public BudgetImpl() {}
     
     public BudgetImpl(String fiscalYear) {
         this.fiscalYear = fiscalYear;
     }
     
-    // Getters y setters 
     @Override
     public String getFiscalYear() {
         return fiscalYear;

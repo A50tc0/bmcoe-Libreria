@@ -14,8 +14,7 @@ public interface Row {
 	String getBranch();
 	void setBranch(String branch);
 	String getObservation();
-	void setObservation(String observation);
-	
+	void setObservation(String observation);	
 	Float calculateTotal();
 	void obtainDetails();
 }

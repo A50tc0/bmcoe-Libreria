@@ -2,7 +2,6 @@ package es.mde.bmcoe;
 
 public class IndirectCostImpl extends RowImpl implements IndirectCost {
     
-    // Constructores
     public IndirectCostImpl() {
     }
     
@@ -10,7 +9,6 @@ public class IndirectCostImpl extends RowImpl implements IndirectCost {
         setAmount(amount);
     }    
 
-	// Métodos específicos
     public Float calculateTotal() {
         return getAmount();
     }

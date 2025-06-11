@@ -4,7 +4,6 @@ public class RowPOWImpl extends RowImpl implements RowPOW {
     
     private String codePow;
 
-    // Constructores
     public RowPOWImpl() {
     }
     
@@ -13,7 +12,6 @@ public class RowPOWImpl extends RowImpl implements RowPOW {
         this.codePow = codePow;
     }
 
-    // Getters y setters
     public String getCodePow() {
         return codePow;
     }
@@ -22,7 +20,6 @@ public class RowPOWImpl extends RowImpl implements RowPOW {
         this.codePow = codePow;
     }
     
-    // Métodos específicos
     public Float calculateTotal() {
         return getAmount();
     }
