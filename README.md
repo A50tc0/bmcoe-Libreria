@@ -5,21 +5,15 @@ BMCOE (Budget Management) es una librería Java diseñada para la gestión de pr
 
 ## Características Principales
 - Gestión de presupuestos con múltiples tipos de costes
-- Sistema de validación de costes generales
-- Cálculo automático de totales
-- Soporte para diferentes tipos de filas de presupuesto
+- Sistema de validación de `OverheadCost`
+- Cálculo de totales por `Budget`
+- Tipos de filas de presupuesto:
+  - `RowPow`
+  - `Indirectcost`
+  - `Overheadcost`
 
 ## Estructura del Proyecto
-```
-es.mde.bmcoe
-├── Budget (Interfaz)
-│   └── BudgetImpl
-├── Row (Interfaz)
-│   └── RowImpl (Abstracta)
-│       ├── OverheadCostImpl
-│       ├── IndirectCostImpl
-│       └── RowPOWImpl
-```
+![DiagramaClases](./Libreria_DiagramaClases.png)
 
 ## Instalación
 
